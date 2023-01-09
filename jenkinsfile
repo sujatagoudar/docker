@@ -20,7 +20,7 @@ pipeline {
             steps {
                sh 'docker pull sujatagoudar/mytomcat:${BUILD_VERSION}'
                sh 'docker rm -f mytomcat'
-               sh 'docker run -d -p 8080:8080 --name mytomcat sujatagoudar/mytomcat:${BUILD_VERSION}'
+               sh 'docker run -d -p 8088:8080 --name mytomcat sujatagoudar/mytomcat:${BUILD_VERSION}'
             }
         }    
     } 
